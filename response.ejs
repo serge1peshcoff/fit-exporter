@@ -1,0 +1,4 @@
+# HELP fit_exporter_stat Google fit stat
+# TYPE fit_exporter_stat gauge
+<% for (const stat of stats) { %>fit_exporter_stat{name="<%= stat.name %>"} <%= stat.value %>
+<% } %>
