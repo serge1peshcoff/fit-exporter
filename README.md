@@ -30,7 +30,7 @@ docker run -it \
     -p 3031:3031 \
     --label com.centurylinklabs.watchtower.enable=false \ # so it won't be restarter by Watchtower if it's running
     --restart unless-stopped \ # so it would start together with the system
-    -v 
+    -v $(pwd)/tokens:/usr/src/app/tokens
     fit-exporter
 ```
 
